@@ -41,7 +41,8 @@ class ItemAdapter(
      */
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
-        holder.textView.text = context.resources.getString(item.stringResourceId)
+        var i = position + 1
+            holder.textView.text = "Line " + i + " : " + context.resources.getString(item.stringResourceId)
     }
 
     /**
